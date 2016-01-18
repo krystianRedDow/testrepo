@@ -33,7 +33,3 @@ test:
             - "protected/runtime"
     php_loc:
         directory: "site"
-complete:
-    shell:
-        - "php createLog.php %BUILD% %PROJECT_TITLE%"
-        - "cp %PROJECT_TITLE%%BUILD%.txt /var/www/logs/%PROJECT_TITLE%%BUILD%.txt"
