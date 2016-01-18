@@ -1,6 +1,6 @@
 build_settings:
     ignore:
-        - "assets"
+        - "vendor"
 setup:
     composer:
         action: "install"
@@ -9,13 +9,11 @@ test:
     php_parallel_lint:
         directory: "site"
         ignore:
-            - "assets"
-            - "protected/runtime"
+            - "vendor"
     php_code_sniffer:
         path: "site"
         ignore:
-            - "assets"
-            - "protected/runtime"
+            - "vendor"
         standard: "code-sniffer-settings.xml"
         allowed_errors: 100000000
         allowed_warnings: 100000000
@@ -23,13 +21,11 @@ test:
         allow_failures: true
         path: "site"
         ignore:
-            - "assets"
-            - "protected/runtime"
+            - "vendor"
     php_docblock_checker:
         allowed_warnings: -1
         path: "site"
         ignore:
-            - "assets"
-            - "protected/runtime"
+            - "vendor"
     php_loc:
         directory: "site"
