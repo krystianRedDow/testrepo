@@ -7,12 +7,12 @@ setup:
     
 test:
     php_parallel_lint:
-        directory: "service"
+        directory: "site"
         ignore:
             - "assets"
             - "protected/runtime"
     php_code_sniffer:
-        path: "service"
+        path: "site"
         ignore:
             - "assets"
             - "protected/runtime"
@@ -21,18 +21,18 @@ test:
         allowed_warnings: 100000000
     php_cpd:
         allow_failures: true
-        path: "service"
+        path: "site"
         ignore:
             - "assets"
             - "protected/runtime"
     php_docblock_checker:
         allowed_warnings: -1
-        path: "service"
+        path: "site"
         ignore:
             - "assets"
             - "protected/runtime"
     php_loc:
-        directory: "service"
+        directory: "site"
 complete:
     shell:
         - "php createLog.php %BUILD% %PROJECT_TITLE%"
